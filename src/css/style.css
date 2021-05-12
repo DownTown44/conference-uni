@@ -1,0 +1,19 @@
+/* Basic reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+/* We specify the base fontsize, because the rem unit is based on the pages fontsize */
+html {
+  /* with 10px, 1rem is 10px */
+  /* font-size: 10px; */
+  /* We change the pixel fontsize to precentage, so the website follows the users option in the browser */
+  /* the browsers base fontsize is 16px so 62.5% is 10px */
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  padding: 1rem; }
