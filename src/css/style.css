@@ -21,7 +21,47 @@ body {
 
 .toolbar {
   background-color: #254E70;
-  border-radius: 3px 3px 0px 0px; }
+  border-radius: 3px 3px 0px 0px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .toolbar__logo {
+    background-color: #5EFC8D;
+    height: 5rem;
+    width: 5rem;
+    margin-right: auto;
+    margin-left: 5rem; }
+
+.navigationItems {
+  display: flex;
+  margin-right: 25rem;
+  align-items: center; }
+  .navigationItems__item {
+    list-style: none;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #f3f3f3;
+    padding: 1rem;
+    border: 2px solid transparent;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s; }
+    .navigationItems__item:not(:first-child) {
+      margin-left: 4rem; }
+    .navigationItems__item:hover {
+      border: 2px solid #5EFC8D;
+      border-radius: 3px;
+      background-color: #5EFC8D;
+      transform: translateY(-3px); }
+      .navigationItems__item:hover a {
+        color: #254E70; }
+    .navigationItems__item a {
+      text-decoration: none;
+      color: #f3f3f3;
+      cursor: pointer; }
 
 .homePage {
   background-color: #f3f3f3;

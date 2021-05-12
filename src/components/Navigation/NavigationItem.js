@@ -1,7 +1,7 @@
 import React from 'react';
 
 const NavigationItem = (props) => (
-  <li className='navigationItem'>
+  <li className='navigationItems__item'>
     <a>{props.children}</a>
   </li>
 );
