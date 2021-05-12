@@ -17,3 +17,7 @@ html {
 body {
   box-sizing: border-box;
   padding: 1rem; }
+
+.homeContainer {
+  background-color: blue;
+  font-size: 1.6rem; }

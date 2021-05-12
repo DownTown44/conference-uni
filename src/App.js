@@ -1,10 +1,9 @@
 import './css/style.css';
+import HomePage from './containers/HomePage';
 
 function App() {
   return (
-    <div>
-      Let's break the web!
-    </div>
+    <HomePage />
   );
 }
 
