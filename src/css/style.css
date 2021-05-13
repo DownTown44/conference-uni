@@ -16,7 +16,7 @@ html {
 body {
   box-sizing: border-box;
   padding: 1rem;
-  background-color: #FEE715;
+  background-color: #5EFC8D;
   font-family: 'Lato', sans-serif; }
 
 .toolbar {
@@ -27,7 +27,7 @@ body {
   justify-content: center;
   align-items: center; }
   .toolbar__logo {
-    background-color: #FEE715;
+    background-color: #5EFC8D;
     height: 5rem;
     width: 5rem;
     margin-right: auto;
@@ -41,8 +41,8 @@ body {
     list-style: none;
     font-size: 2rem;
     font-weight: 600;
-    color: #f3f3f3;
     padding: 1rem;
+    border-radius: 3px;
     border: 2px solid transparent;
     height: 100%;
     display: flex;
@@ -52,9 +52,8 @@ body {
     .navigationItems__item:not(:first-child) {
       margin-left: 4rem; }
     .navigationItems__item:hover {
-      border: 2px solid #FEE715;
-      border-radius: 3px;
-      background-color: #FEE715;
+      border: 2px solid #5EFC8D;
+      background-color: #5EFC8D;
       transform: translateY(-3px); }
       .navigationItems__item:hover a {
         color: #3A173A; }
@@ -92,4 +91,4 @@ body {
       font-weight: 400;
       letter-spacing: 1px; }
       .homePage__greeting h2 span {
-        color: #FEE715; }
+        color: #5EFC8D; }

@@ -1,6 +1,6 @@
 // Contains the homepage elements, sections
 .homePage {
-  background-color: $color-white;
+  background-color: $color-white-background;
   font-size: 1.6rem;
   
   &__welcomeSection {
@@ -26,14 +26,14 @@
     margin-top: 100px;
 
     h1 {
-      color: $color-white;
+      color: $color-white-text;
       font-size: 7rem;
       font-weight: 400;
       margin-bottom: 4rem;
     }
 
     h2 {
-      color: $color-white;
+      color: $color-white-text;
       font-size: 3rem;
       font-weight: 400;
       letter-spacing: 1px;
