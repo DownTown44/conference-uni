@@ -74,17 +74,20 @@ body {
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
       .homePage__welcomeSection {
         /* modern css property */
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        -webkit-clip-path: polygon(35% 0, 100% 0, 100% 100%, 70% 100%);
         clip-path: polygon(35% 0, 100% 0, 100% 100%, 70% 100%);
         height: 80vh; } }
   .homePage__greeting {
+    height: 40rem;
     width: 80rem;
-    margin-top: 100px; }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
     .homePage__greeting h1 {
       color: #f3f3f3;
       font-size: 7rem;
       font-weight: 400;
-      margin-bottom: 4rem; }
+      transform: translateX(-10rem); }
     .homePage__greeting h2 {
       color: #f3f3f3;
       font-size: 3rem;
@@ -92,3 +95,6 @@ body {
       letter-spacing: 1px; }
       .homePage__greeting h2 span {
         color: #5EFC8D; }
+  .homePage__changingSentence {
+    font-size: 4rem !important;
+    transform: translateX(-5rem); }

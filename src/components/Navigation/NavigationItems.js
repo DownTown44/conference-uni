@@ -10,8 +10,8 @@ const NavigationItems = (props) => (
     <NavigationItem>About</NavigationItem>
     <NavigationItem>Contact</NavigationItem>
     {/* TODO: Conditional rendering */}
-    <NavigationItem>Sing in</NavigationItem>
-    <NavigationItem>Sing up</NavigationItem>
+    <NavigationItem>Sign in</NavigationItem>
+    <NavigationItem>Sign up</NavigationItem>
     {/* Log out */}
   </ul>
 );
