@@ -1,5 +1,10 @@
 import React, {useState, useEffect} from 'react';
 
+import Story from '../components/Story/Story';
+
+import { FaChalkboardTeacher } from 'react-icons/fa';
+import Boxes from '../assets/boxes.png';
+
 const HomePage = () => {
   // Array index
   const [index, setIndex] = useState(0);
@@ -56,7 +61,15 @@ const HomePage = () => {
         </section>
       </div>
       <section className="homePage__hook">
-        
+        <Story
+          uClass="u-flex-left" 
+          icon={<FaChalkboardTeacher className="story__box__board-icon" />}
+          title="Break the web"
+          image={Boxes} >
+            Break the web is a conference for top notch web developers.
+            You will hear about the newest, most impactful changes on the web.
+            You can attend as a participant or as a presenter!
+        </Story>
       </section>
     </div>
   )

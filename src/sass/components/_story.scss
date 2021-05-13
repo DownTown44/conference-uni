@@ -1,0 +1,51 @@
+.story {
+  margin-top: 7rem;
+
+  &__box {
+    width: 45rem;
+    padding: 4rem;
+    min-height: 35rem;
+    border-radius: 15px;
+    background: #fbf7f7;
+    -webkit-box-shadow: 17px 17px 37px #e4e1e1,
+    -17px -17px 37px #ffffff;
+    box-shadow: 17px 17px 37px #e4e1e1,
+    -17px -17px 37px #ffffff;
+                 
+    display: flex;
+    flex-direction: column;
+  
+    &__board-icon {
+      font-size: 6rem;
+      border-radius: 10px;
+      background: linear-gradient(
+        to right bottom, 
+        rgba($color-primary-light, .75), 
+        rgba($color-primary, .75));
+      padding: .7rem;
+      color: $color-secondary;
+  
+      margin-bottom: 2rem;
+      margin-left: 1rem;
+    }
+  
+    h2 {
+      font-size: 4rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      color: $color-primary;
+    
+    }
+
+    p {
+      font-size: 2rem;
+      letter-spacing: .5px;
+      color: $color-primary-light;
+    }
+  }
+
+  img {
+    width: 45rem;
+  }
+}
+
