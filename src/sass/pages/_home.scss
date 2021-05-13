@@ -2,7 +2,20 @@
 .homePage {
   background-color: $color-white-background;
   font-size: 1.6rem;
-  
+
+  &__picture {
+    background-image: 
+      linear-gradient(
+        to right bottom, 
+        rgba($color-primary-light, 0.6), 
+        rgba($color-white-background, 0.6)), 
+      url('../assets/hackathon.jpg');
+    background-size: cover;
+    /* holds the image at the top */
+    background-position: top;
+    position: relative;
+  }
+
   &__welcomeSection {
     background-color: $color-primary-light;
 
@@ -51,5 +64,10 @@
     // We need important here so we ovveride the parents h2 selector
     font-size: 4rem !important;
     transform: translateX(-5rem);
+  }
+
+  &__hook {
+    background-color: $color-white-background;
+    height: 50vh;
   }
 }
