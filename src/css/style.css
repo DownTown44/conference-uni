@@ -123,6 +123,25 @@ body::-webkit-scrollbar-thumb {
       border-top: 1px solid #5EFC8D;
       animation: stripe-slide 12s infinite linear forwards; }
 
+.newsFeed {
+  padding: 7rem;
+  display: flex;
+  justify-content: space-between; }
+
+.countDownCard {
+  border: 2px solid #3A173A;
+  border-radius: 5px;
+  background-color: #5EFC8D;
+  padding: 4rem;
+  min-width: 37rem; }
+
+.newsCard {
+  border: 2px solid #3A173A;
+  border-radius: 5px;
+  background-color: #5EFC8D;
+  padding: 4rem;
+  width: 30rem; }
+
 .toolbar {
   background-color: #3A173A;
   border-radius: 3px 3px 0px 0px;
@@ -217,3 +236,5 @@ body::-webkit-scrollbar-thumb {
   .homePage__hook {
     background-color: #f3f3f3;
     padding-bottom: 7rem; }
+  .homePage__news {
+    background-color: #582358; }

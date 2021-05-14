@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 import Story from '../components/Story/Story';
+import NewsFeed from '../components/NewsFeed/NewsFeed';
 
 import { FaChalkboardTeacher } from 'react-icons/fa';
 import { FaThumbtack } from 'react-icons/fa';
@@ -89,6 +90,9 @@ const HomePage = () => {
           title="Have an idea?">
             To innovate, or just to get better everyday, you need to think outside of the box, and to think outside you'll need to break out... you'll need to break the web.
         </Story>
+      </section>
+      <section className="homePage__news">
+        <NewsFeed />
       </section>
     </div>
   )

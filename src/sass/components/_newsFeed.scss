@@ -1,0 +1,17 @@
+.newsFeed {
+  padding: 7rem;
+
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+}
+
+.countDownCard {
+  @include newsCardLayout;
+  min-width: 37rem; 
+}
+
+.newsCard {
+  @include newsCardLayout;
+  width: 30rem;
+}

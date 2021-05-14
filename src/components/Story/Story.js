@@ -1,6 +1,6 @@
 import React from 'react';
 import StoryBox from './StoryBox';
-import CTAButton from '../Button/CTAButton';
+import CTAButton from '../Buttons/CTAButton';
 
 const Story = (props) => {
   let imageOrButton = <img src={props.image} />;
