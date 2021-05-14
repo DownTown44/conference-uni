@@ -3,7 +3,10 @@ import React, {useState, useEffect} from 'react';
 import Story from '../components/Story/Story';
 
 import { FaChalkboardTeacher } from 'react-icons/fa';
+import { FaThumbtack } from 'react-icons/fa';
+import { FaRegLightbulb } from 'react-icons/fa';
 import Boxes from '../assets/boxes.png';
+import Topics from '../assets/topics.png';
 
 const HomePage = () => {
   // Array index
@@ -64,11 +67,27 @@ const HomePage = () => {
         <Story
           uClass="u-flex-left" 
           icon={<FaChalkboardTeacher className="story__box__board-icon" />}
-          title="Break the web"
-          image={Boxes} >
+          image={Boxes}
+          title="Break the web">
             Break the web is a conference for top notch web developers.
             You will hear about the newest, most impactful changes on the web.
             You can attend as a participant or as a presenter!
+        </Story>
+        <Story
+          uClass="u-flex-right" 
+          icon={<FaThumbtack className="story__box__board-icon" />}
+          image={Topics}
+          title="Topics">
+            We discuss anything that is web development or an indispensable part of it. Basically Full Stack!
+            Content design, visual design, usability, security, speed, optimization, languages, frameworks, new technologies (like WebAssembly), should I go on?
+        </Story>
+        <Story
+          uClass="u-flex-left" 
+          icon={<FaRegLightbulb className="story__box__board-icon" />}
+          buttonText="Break the web!"
+          ctaHref=""
+          title="Have an idea?">
+            To innovate, or just to get better everyday, you need to think outside of the box, and to think outside you'll need to break out... you'll need to break the web.
         </Story>
       </section>
     </div>
