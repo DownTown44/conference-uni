@@ -4,7 +4,7 @@ const CountDownCard = () => {
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
     // The plus sign will cast the date as an integer
-    const difference = +new Date(`10/10/${year}`) - +new Date();
+    const difference = +new Date(`7/16/${year}`) - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -53,7 +53,7 @@ const CountDownCard = () => {
       </div>  
       <p>Are you ready?</p>
       <div className="countDownCard__datebox">
-        <p>Date:</p>
+        <p>Date: 7/16/2021</p>
       </div>
     </div>
   );

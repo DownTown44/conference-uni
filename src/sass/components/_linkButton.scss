@@ -1,0 +1,29 @@
+.linkButton, .linkButton:visited {
+  width: 20rem;
+  height: 4rem;
+  margin-right: 6rem;
+  margin-left: 4rem;
+  cursor: pointer;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: $color-secondary;
+  background-color: $color-primary-light;
+  border: 2px solid $color-primary;
+  border-radius: 3px; 
+
+  // Center text
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all .5s ease;
+
+  &:hover {
+    background-color: $color-secondary;
+    color: $color-primary-light;
+    transform: translateY(-5px);
+  }
+}

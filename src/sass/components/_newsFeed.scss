@@ -8,10 +8,79 @@
 
 .countDownCard {
   @include newsCardLayout;
-  min-width: 37rem; 
+  min-width: 45rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 0;
+
+  h3 {
+    font-weight: 600;
+    font-size: 3.5rem;
+    color: $color-primary;
+  }
+
+  p {
+    font-size: 4rem;
+    font-weight: 400;
+    color: $color-primary-light;
+    align-self: center;
+    justify-self: center;
+    margin-top: 2rem;
+  }
+
+  &__countDown {
+    width: 100%;
+    margin: 4rem 0 4px 0;
+    padding: 5px;
+    border: 2px solid $color-primary;
+    border-radius: 3px;
+    background-color: $color-primary-light;
+    
+    font-size: 3rem;
+    color: $color-secondary-light;
+  }
+
+  &__datebox {
+    background-color: $color-primary-light;
+    border: 2px solid $color-secondary;
+    border-radius: 3px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    height: 4rem;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    p {
+      color: $color-secondary-light;
+      font-size: 2rem;
+      margin-left: 20%;
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .newsCard {
   @include newsCardLayout;
-  width: 30rem;
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h2 {
+    color: $color-primary;
+    font-size: 3.5rem;
+  }
+
+  p {
+    color: $color-primary-light;
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
 }
