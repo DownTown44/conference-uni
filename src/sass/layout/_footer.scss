@@ -1,0 +1,83 @@
+.footer {
+  height: 40rem;
+  border-top: 4px solid $color-primary;
+  background: linear-gradient(
+    to bottom,
+    $color-primary 0%,
+    #222 100%
+  );
+  color: $color-white-text;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  
+  &__box {
+    margin-top: 7rem;
+    width: 40%;
+    min-height: 20rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      font-size: 3rem;
+      color: $color-white-text;
+    }
+
+    h3 {
+      color: $color-white-text;
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      
+      a {
+        cursor: pointer;
+        color: $color-secondary;
+      }
+    }
+  }
+
+  &__end {
+    background-color: #111;
+    height: 7rem;
+    width: 100%;
+    margin-top: auto;
+
+    font-size: 2rem;
+    font-weight: 300;
+
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    
+    span {
+      color: $color-secondary;
+    }
+  }
+}
+
+.socialLinks {
+  color: $color-secondary;
+  font-size: 4rem;
+  width: 50%;
+
+
+  display: flex;
+  justify-content: space-around;
+
+  &__icon {
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+}
