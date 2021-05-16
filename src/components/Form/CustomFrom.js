@@ -12,6 +12,19 @@ const CustomForm = () => {
 
   const [count, setCount] = useState(1);
 
+  // useEffect(() => {
+  //   switch(coount) {
+  //     case 2:
+  //       // code block
+  //       break;
+  //     case 3:
+  //       // code block
+  //       break;
+  //     default:
+  //       // code block
+  //   }
+  // }, [count])
+
   const updateForm = (e) => {
     setForm({
       ...form,
@@ -22,6 +35,9 @@ const CustomForm = () => {
   return (
     <div className="customForm">
       <div className="customForm__stepCounter">
+        <div className={"customForm__stepDot " + (count >= 1 ? "customForm__stepDot--active" : "")}>1</div>
+        <div className={"customForm__stepDot " + (count >= 2 ? "customForm__stepDot--active" : "")}>2</div>
+        <div className={"customForm__stepDot " + (count === 3 ? "customForm__stepDot--active" : "")}>3</div>
       </div>
       <form className="customForm__form">
         {/* FIRST PART */}

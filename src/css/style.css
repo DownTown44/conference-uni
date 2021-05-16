@@ -97,9 +97,6 @@ body::-webkit-scrollbar-thumb {
   width: 50rem;
   display: flex;
   flex-direction: column; }
-  .customForm__stepCounter {
-    height: 7rem;
-    margin-bottom: 4rem; }
   .customForm__form {
     background-color: #f3f3f3;
     border-radius: 4px 4px 0 0;
@@ -168,6 +165,35 @@ body::-webkit-scrollbar-thumb {
       height: 5rem;
       width: 25rem;
       margin: 0 auto; }
+  .customForm__stepCounter {
+    height: 7rem;
+    margin-bottom: 4rem;
+    font-size: 2rem;
+    color: #5EFC8D;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; }
+  .customForm__stepDot {
+    background-color: #582358;
+    border: 2px solid #5EFC8D;
+    border-radius: 50%;
+    position: relative;
+    height: 5rem;
+    width: 5rem;
+    transition: all .2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .customForm__stepDot:not(:last-child)::after {
+      content: '';
+      background-color: #5EFC8D;
+      height: .5rem;
+      width: 5rem;
+      position: absolute;
+      right: -7rem; }
+    .customForm__stepDot--active {
+      background-color: #5EFC8D;
+      color: #582358; }
 
 .linkButton, .linkButton:visited {
   width: 20rem;
