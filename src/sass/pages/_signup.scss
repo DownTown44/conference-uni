@@ -6,6 +6,11 @@
     background-color: $color-primary-light;
     height: 100%;
     width: 60%;
+    padding-top: 7rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   &__didyou{

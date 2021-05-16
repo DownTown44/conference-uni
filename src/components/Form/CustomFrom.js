@@ -7,7 +7,7 @@ const CustomForm = () => {
     lastName: "",
     username: "",
     password: "",
-    repeatPassword: ""
+    confirmPassword: ""
   })
 
   const [count, setCount] = useState(1);
@@ -22,14 +22,13 @@ const CustomForm = () => {
   return (
     <div className="customForm">
       <div className="customForm__stepCounter">
-
       </div>
-      <form>
+      <form className="customForm__form">
         {/* FIRST PART */}
         {count === 1 ? (
           <>
-            <div className="">
-              <label>Email</label>
+            <div className="customForm__form-field">
+              <label>E-mail</label>
               <input 
                 type="email"
                 className=""
@@ -37,7 +36,7 @@ const CustomForm = () => {
                 onChange={updateForm}
                 value={form.email} />
             </div>
-            <div className="">
+            <div className="customForm__form-field">
               <label>First Name</label>
               <input 
                 type="text"
@@ -46,7 +45,7 @@ const CustomForm = () => {
                 onChange={updateForm}
                 value={form.firstName} />
             </div>
-            <div className="">
+            <div className="customForm__form-field">
               <label>Last Name</label>
               <input 
                 type="text"
@@ -61,7 +60,7 @@ const CustomForm = () => {
         {/* SECOND PART */}
         {count === 2 ? (
           <>
-            <div className="">
+            <div className="customForm__form-field">
               <label>Username</label>
               <input 
                 type="username"
@@ -70,49 +69,51 @@ const CustomForm = () => {
                 onChange={updateForm}
                 value={form.username} />
             </div>
-            <div className="">
+            <div className="customForm__form-field">
               <label>Password</label>
               <input 
                 type="password"
                 className=""
-                name="firstName"
+                name="password"
                 onChange={updateForm}
                 value={form.password} />
             </div>
-            <div className="">
-              <label>Repeat password</label>
+            <div className="customForm__form-field">
+              <label>Confirm password</label>
               <input 
                 type="password"
                 className=""
-                name="lastName"
+                name="confirmPassword"
                 onChange={updateForm}
-                value={form.repeatPassword} />
+                value={form.confirmPassword} />
             </div>
           </>
         ) : null}
 
         {/* THIRD PART */}
         {count === 3 ? (
-          <div>
+          <div className="customForm__review">
             <p>Please review your data</p>
             <p>Email: <span>{form.email}</span></p>
             <p>First name: <span>{form.firstName}</span></p>
             <p>Last name: <span>{form.lastName}</span></p>
             <p>Username: <span>{form.username}</span></p>
-            <button 
-              className="customForm__submitbtn"
+            <button
+              className="ctaButton"
               type="submit">
               Submit</button>
           </div>
         ) : null}
       </form>
       <div className="customForm__controls">
-        <button 
+        <button
+          className="customForm__controls-btn"
           onClick={() => setCount(prev => prev - 1)}
           disabled={count < 2}>
           Back
         </button>
-        <button 
+        <button
+          className="customForm__controls-btn"
           onClick={() => setCount(prev => prev + 1)}
           disabled={count > 2}>
           Next

@@ -1,0 +1,114 @@
+.customForm {
+  height: 60rem;
+  width: 50rem;
+
+  display: flex;
+  flex-direction: column;
+
+  &__stepCounter {
+    height: 7rem;
+    margin-bottom: 4rem;
+  }
+
+  &__form {
+    background-color: $color-white-background;
+    border-radius: 4px 4px 0 0;
+    min-height: 40rem;
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    &-field {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: $color-primary-light;
+
+      height: 8rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      
+      input {
+        color: $color-primary-light;
+        font-size: 1.8rem;
+        height: 3.5rem;
+        border: 3px solid $color-primary;
+        border-radius: 3px;
+        outline: none;
+      }
+    }
+  }
+  
+  &__controls {
+    background-color: $color-white-background;
+    border-radius: 0 0 4px 4px;
+    padding: 2rem;
+    padding-top: 0;
+
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &-btn {
+      background-color: $color-primary-light;
+      color: $color-white-text;
+      font-size: 1.8rem;
+      border-radius: 3px;
+      border: none;
+      border-bottom: 4px solid $color-secondary;
+
+      height: 4rem;
+      width: 15rem;
+      outline: none;
+      
+      transition: all .2s ease;
+
+      &:hover {
+        background-color: darken($color-primary-light, 3%);
+      }
+
+      &:active {
+        border: 0;
+        transform: translateY(1px);
+      }
+
+      &:disabled {
+        filter: grayscale(80%);
+      }
+    }
+  }
+
+  &__review {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    p {
+      color: $color-primary;
+      font-size: 2.5rem;
+    }
+
+    & p:first-child {
+      color: $color-primary;
+      font-size: 3rem;
+      font-weight: 600;
+      margin: 0 auto;
+    }
+
+    // CTA button
+    button {
+      font-size: 2.5rem;
+      height: 5rem;
+      width: 25rem;
+
+      margin: 0 auto;
+    }
+  }
+}
