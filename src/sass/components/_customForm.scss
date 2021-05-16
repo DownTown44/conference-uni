@@ -145,6 +145,7 @@
 
     &--active {
       background-color: $color-secondary;
+      border: 2px solid $color-primary;
       color: $color-primary-light;
     }
   }

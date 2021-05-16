@@ -193,6 +193,7 @@ body::-webkit-scrollbar-thumb {
       right: -7rem; }
     .customForm__stepDot--active {
       background-color: #5EFC8D;
+      border: 2px solid #3A173A;
       color: #582358; }
 
 .linkButton, .linkButton:visited {
