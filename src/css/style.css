@@ -148,6 +148,7 @@ body::-webkit-scrollbar-thumb {
 
 .newsFeed {
   padding: 7rem;
+  overflow: hidden;
   display: flex;
   justify-content: space-between; }
 
@@ -372,3 +373,16 @@ body::-webkit-scrollbar-thumb {
     padding-bottom: 7rem; }
   .homePage__news {
     background-color: #582358; }
+
+.signup {
+  height: 85vh;
+  display: flex; }
+  .signup__form {
+    background-color: #582358;
+    height: 100%;
+    width: 60%; }
+  .signup__didyou {
+    background-color: #5EFC8D;
+    height: 100%;
+    width: 40%;
+    border-right: 3px solid #3A173A; }

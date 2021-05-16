@@ -1,0 +1,17 @@
+.signup {
+  height: 85vh;
+  display: flex;
+
+  &__form {
+    background-color: $color-primary-light;
+    height: 100%;
+    width: 60%;
+  }
+
+  &__didyou{
+    background-color: $color-secondary;
+    height: 100%;
+    width: 40%;
+    border-right: 3px solid $color-primary;
+  }
+}
