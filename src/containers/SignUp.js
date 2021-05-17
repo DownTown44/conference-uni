@@ -1,12 +1,12 @@
 import React from 'react';
 
-import CustomForm from '../components/Form/CustomFrom';
+import SignupForm from '../components/Form/SignupForm';
 
 const Signup = () => {
   return (
     <div className="signup">
       <div className="signup__form">
-        <CustomForm />
+        <SignupForm />
       </div>
       <div className="signup__didyou">
         

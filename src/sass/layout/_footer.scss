@@ -62,22 +62,3 @@
     }
   }
 }
-
-.socialLinks {
-  color: $color-secondary;
-  font-size: 4rem;
-  width: 50%;
-
-
-  display: flex;
-  justify-content: space-around;
-
-  &__icon {
-    cursor: pointer;
-    transition: all .3s;
-
-    &:hover {
-      transform: translateY(-3px);
-    }
-  }
-}

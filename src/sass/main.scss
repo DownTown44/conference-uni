@@ -3,7 +3,9 @@
 @import "base/utilites";
 
 @import "components/ctaButton";
-@import "components/customForm";
+@import "components/iconParagraph";
+@import "components/socialLinks";
+@import "components/signupForm";
 @import "components/linkButton";
 @import "components/newsFeed";
 @import "components/story";
@@ -11,5 +13,6 @@
 @import "layout/toolbar";
 @import "layout/footer";
 
+@import "pages/contact";
 @import "pages/home";
 @import "pages/signup";

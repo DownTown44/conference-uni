@@ -1,0 +1,21 @@
+.iconParagraph {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: $color-primary-light;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  p {
+    margin-left: 3rem;
+  }
+
+  &:not(:last-child) {
+    margin-top: 1.5rem;
+  }
+}
+
+.icon {
+  font-size: 3.5rem;
+}

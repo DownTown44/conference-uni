@@ -8,7 +8,7 @@ const NavigationItems = (props) => (
     <NavigationItem>Conference</NavigationItem>
     <NavigationItem>FAQ</NavigationItem>
     <NavigationItem>About</NavigationItem>
-    <NavigationItem>Contact</NavigationItem>
+    <NavigationItem link='/contact'>Contact</NavigationItem>
     {/* TODO: Conditional rendering */}
     <NavigationItem>Sign in</NavigationItem>
     <NavigationItem link='/signup'>Sign up</NavigationItem>

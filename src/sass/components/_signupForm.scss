@@ -1,4 +1,4 @@
-.customForm {
+.signupForm {
   height: 60rem;
   width: 50rem;
 
@@ -30,7 +30,7 @@
         color: $color-primary-light;
         font-size: 1.8rem;
         height: 3.5rem;
-        border: 3px solid $color-primary;
+        border: 2px solid $color-primary;
         border-radius: 3px;
         outline: none;
       }
@@ -56,6 +56,7 @@
       border-radius: 3px;
       border: none;
       border-bottom: 4px solid $color-secondary;
+      cursor: pointer;
 
       height: 4rem;
       width: 15rem;
@@ -73,6 +74,7 @@
       }
 
       &:disabled {
+        cursor: not-allowed;
         filter: grayscale(80%);
       }
     }
@@ -99,10 +101,10 @@
 
     // CTA button
     button {
+      cursor: pointer;
       font-size: 2.5rem;
       height: 5rem;
       width: 25rem;
-
       margin: 0 auto;
     }
   }
@@ -135,7 +137,7 @@
     &:not(:last-child)::after {
       content: '';
       background-color: $color-secondary;
-      height: .5rem;
+      height: .3rem;
       width: 5rem;
 
       position: absolute;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CustomForm = () => {
+const SignupForm = () => {
   const [form, setForm] = useState({
     email: "",
     firstName: "",
@@ -12,19 +12,6 @@ const CustomForm = () => {
 
   const [count, setCount] = useState(1);
 
-  // useEffect(() => {
-  //   switch(coount) {
-  //     case 2:
-  //       // code block
-  //       break;
-  //     case 3:
-  //       // code block
-  //       break;
-  //     default:
-  //       // code block
-  //   }
-  // }, [count])
-
   const updateForm = (e) => {
     setForm({
       ...form,
@@ -33,39 +20,36 @@ const CustomForm = () => {
   }
 
   return (
-    <div className="customForm">
-      <div className="customForm__stepCounter">
-        <div className={"customForm__stepDot " + (count >= 1 ? "customForm__stepDot--active" : "")}>1</div>
-        <div className={"customForm__stepDot " + (count >= 2 ? "customForm__stepDot--active" : "")}>2</div>
-        <div className={"customForm__stepDot " + (count === 3 ? "customForm__stepDot--active" : "")}>3</div>
+    <div className="signupForm">
+      <div className="signupForm__stepCounter">
+        <div className={"signupForm__stepDot " + (count >= 1 ? "signupForm__stepDot--active" : "")}>1</div>
+        <div className={"signupForm__stepDot " + (count >= 2 ? "signupForm__stepDot--active" : "")}>2</div>
+        <div className={"signupForm__stepDot " + (count === 3 ? "signupForm__stepDot--active" : "")}>3</div>
       </div>
-      <form className="customForm__form">
+      <form className="signupForm__form">
         {/* FIRST PART */}
         {count === 1 ? (
           <>
-            <div className="customForm__form-field">
+            <div className="signupForm__form-field">
               <label>E-mail</label>
               <input 
                 type="email"
-                className=""
                 name="email"
                 onChange={updateForm}
                 value={form.email} />
             </div>
-            <div className="customForm__form-field">
+            <div className="signupForm__form-field">
               <label>First Name</label>
               <input 
                 type="text"
-                className=""
                 name="firstName"
                 onChange={updateForm}
                 value={form.firstName} />
             </div>
-            <div className="customForm__form-field">
+            <div className="signupForm__form-field">
               <label>Last Name</label>
               <input 
                 type="text"
-                className=""
                 name="lastName"
                 onChange={updateForm}
                 value={form.lastName} />
@@ -76,29 +60,26 @@ const CustomForm = () => {
         {/* SECOND PART */}
         {count === 2 ? (
           <>
-            <div className="customForm__form-field">
+            <div className="signupForm__form-field">
               <label>Username</label>
               <input 
                 type="username"
-                className=""
                 name="username"
                 onChange={updateForm}
                 value={form.username} />
             </div>
-            <div className="customForm__form-field">
+            <div className="signupForm__form-field">
               <label>Password</label>
               <input 
                 type="password"
-                className=""
                 name="password"
                 onChange={updateForm}
                 value={form.password} />
             </div>
-            <div className="customForm__form-field">
+            <div className="signupForm__form-field">
               <label>Confirm password</label>
               <input 
                 type="password"
-                className=""
                 name="confirmPassword"
                 onChange={updateForm}
                 value={form.confirmPassword} />
@@ -108,7 +89,7 @@ const CustomForm = () => {
 
         {/* THIRD PART */}
         {count === 3 ? (
-          <div className="customForm__review">
+          <div className="signupForm__review">
             <p>Please review your data</p>
             <p>Email: <span>{form.email}</span></p>
             <p>First name: <span>{form.firstName}</span></p>
@@ -121,15 +102,15 @@ const CustomForm = () => {
           </div>
         ) : null}
       </form>
-      <div className="customForm__controls">
+      <div className="signupForm__controls">
         <button
-          className="customForm__controls-btn"
+          className="signupForm__controls-btn"
           onClick={() => setCount(prev => prev - 1)}
           disabled={count < 2}>
           Back
         </button>
         <button
-          className="customForm__controls-btn"
+          className="signupForm__controls-btn"
           onClick={() => setCount(prev => prev + 1)}
           disabled={count > 2}>
           Next
@@ -139,4 +120,4 @@ const CustomForm = () => {
   );
 }
 
-export default CustomForm;
+export default SignupForm;
