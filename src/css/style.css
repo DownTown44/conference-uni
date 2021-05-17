@@ -107,23 +107,117 @@ body::-webkit-scrollbar-thumb {
 .icon {
   font-size: 3.5rem; }
 
-.socialLinks {
+.linkButton, .linkButton:visited {
+  width: 20rem;
+  height: 4rem;
+  margin-right: 6rem;
+  margin-left: 4rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 400;
   color: #5EFC8D;
-  font-size: 4rem;
-  width: 50%;
+  background-color: #582358;
+  border: 2px solid #3A173A;
+  border-radius: 3px;
   display: flex;
-  justify-content: space-around; }
-  .socialLinks__icon {
-    cursor: pointer;
-    transition: all .3s; }
-    .socialLinks__icon:hover {
-      transform: translateY(-3px); }
-  .socialLinks--dark {
-    width: 75%;
-    margin: 0 auto;
-    margin-top: 1.8rem;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s ease; }
+  .linkButton:hover, .linkButton:visited:hover {
+    background-color: #5EFC8D;
     color: #582358;
-    justify-content: space-between; }
+    transform: translateY(-5px); }
+
+.loginForm {
+  position: absolute;
+  top: 110px;
+  right: 260px;
+  overflow: hidden;
+  z-index: 100;
+  background-color: red;
+  width: 30rem; }
+
+.newsFeed {
+  padding: 7rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.countDownCard {
+  border: 2px solid #3A173A;
+  border-radius: 5px;
+  background-color: #5EFC8D;
+  padding: 4rem;
+  min-height: 35rem;
+  background: #5EFC8D;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2), inset 0 -3px 4px 0 rgba(0, 0, 0, 0.1), 0 -7px 15px -2px #582358, inset 0 3px 2px -5px #3A173A, inset 0 0 8px 1px #5EFC8D, inset 0 10px 40px 0 #9ffcbb;
+  min-width: 45rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 0; }
+  .countDownCard h3 {
+    font-weight: 600;
+    font-size: 3.5rem;
+    color: #3A173A; }
+  .countDownCard p {
+    font-size: 4rem;
+    font-weight: 400;
+    color: #582358;
+    align-self: center;
+    justify-self: center;
+    margin-top: 2rem; }
+  .countDownCard__countDown {
+    width: 100%;
+    margin: 4rem 0 4px 0;
+    padding: 5px;
+    border: 2px solid #3A173A;
+    border-radius: 3px;
+    background-color: #582358;
+    font-size: 3rem;
+    color: #9ffcbb; }
+  .countDownCard__datebox {
+    background-color: #582358;
+    border: 2px solid #5EFC8D;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4rem;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; }
+    .countDownCard__datebox p {
+      color: #9ffcbb;
+      font-size: 2rem;
+      margin-left: 20%;
+      margin-bottom: 10px; }
+
+.newsCard {
+  border: 2px solid #3A173A;
+  border-radius: 5px;
+  background-color: #5EFC8D;
+  padding: 4rem;
+  min-height: 35rem;
+  background: #5EFC8D;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2), inset 0 -3px 4px 0 rgba(0, 0, 0, 0.1), 0 -7px 15px -2px #582358, inset 0 3px 2px -5px #3A173A, inset 0 0 8px 1px #5EFC8D, inset 0 10px 40px 0 #9ffcbb;
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .newsCard h2 {
+    color: #3A173A;
+    font-size: 3.5rem; }
+  .newsCard p {
+    color: #582358;
+    font-weight: 400;
+    font-size: 1.8rem;
+    margin-bottom: 2rem; }
 
 .signupForm {
   height: 60rem;
@@ -232,108 +326,23 @@ body::-webkit-scrollbar-thumb {
       border: 2px solid #3A173A;
       color: #582358; }
 
-.linkButton, .linkButton:visited {
-  width: 20rem;
-  height: 4rem;
-  margin-right: 6rem;
-  margin-left: 4rem;
-  cursor: pointer;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 1.8rem;
-  font-weight: 400;
+.socialLinks {
   color: #5EFC8D;
-  background-color: #582358;
-  border: 2px solid #3A173A;
-  border-radius: 3px;
+  font-size: 4rem;
+  width: 50%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all .5s ease; }
-  .linkButton:hover, .linkButton:visited:hover {
-    background-color: #5EFC8D;
+  justify-content: space-around; }
+  .socialLinks__icon {
+    cursor: pointer;
+    transition: all .3s; }
+    .socialLinks__icon:hover {
+      transform: translateY(-3px); }
+  .socialLinks--dark {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 1.8rem;
     color: #582358;
-    transform: translateY(-5px); }
-
-.newsFeed {
-  padding: 7rem;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; }
-
-.countDownCard {
-  border: 2px solid #3A173A;
-  border-radius: 5px;
-  background-color: #5EFC8D;
-  padding: 4rem;
-  min-height: 35rem;
-  background: #5EFC8D;
-  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2), inset 0 -3px 4px 0 rgba(0, 0, 0, 0.1), 0 -7px 15px -2px #582358, inset 0 3px 2px -5px #3A173A, inset 0 0 8px 1px #5EFC8D, inset 0 10px 40px 0 #9ffcbb;
-  min-width: 45rem;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  padding-bottom: 0; }
-  .countDownCard h3 {
-    font-weight: 600;
-    font-size: 3.5rem;
-    color: #3A173A; }
-  .countDownCard p {
-    font-size: 4rem;
-    font-weight: 400;
-    color: #582358;
-    align-self: center;
-    justify-self: center;
-    margin-top: 2rem; }
-  .countDownCard__countDown {
-    width: 100%;
-    margin: 4rem 0 4px 0;
-    padding: 5px;
-    border: 2px solid #3A173A;
-    border-radius: 3px;
-    background-color: #582358;
-    font-size: 3rem;
-    color: #9ffcbb; }
-  .countDownCard__datebox {
-    background-color: #582358;
-    border: 2px solid #5EFC8D;
-    border-radius: 3px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 4rem;
-    width: 50%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center; }
-    .countDownCard__datebox p {
-      color: #9ffcbb;
-      font-size: 2rem;
-      margin-left: 20%;
-      margin-bottom: 10px; }
-
-.newsCard {
-  border: 2px solid #3A173A;
-  border-radius: 5px;
-  background-color: #5EFC8D;
-  padding: 4rem;
-  min-height: 35rem;
-  background: #5EFC8D;
-  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2), inset 0 -3px 4px 0 rgba(0, 0, 0, 0.1), 0 -7px 15px -2px #582358, inset 0 3px 2px -5px #3A173A, inset 0 0 8px 1px #5EFC8D, inset 0 10px 40px 0 #9ffcbb;
-  width: 35rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
-  .newsCard h2 {
-    color: #3A173A;
-    font-size: 3.5rem; }
-  .newsCard p {
-    color: #582358;
-    font-weight: 400;
-    font-size: 1.8rem;
-    margin-bottom: 2rem; }
+    justify-content: space-between; }
 
 .story {
   margin-top: 7rem; }

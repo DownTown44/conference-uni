@@ -1,19 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect }from 'react';
 
 import NavigationItems from './NavigationItems'; 
+import LoginForm from '../Login/LoginForm'; 
 
-const Toolbar = (props) => (
-  
-  <header className="toolbar">
-    {/* TODO: Insert logo */}
-    <div className="toolbar__logo">
+const Toolbar = (props) => {
+  const [open, setOpen] = useState(false);
 
-    </div>
-    <nav className="navigationDesktop">
-      <NavigationItems />
-    </nav>
-    {/* TODO: Insert darkmode button */}
-  </header>
-);
+  useEffect(() => {
+    console.log(open);
+  }, [open])
 
+  return (
+    <header className="toolbar">
+      {/* TODO: Insert logo */}
+      <div className="toolbar__logo">
+
+      </div>
+      <nav className="navigationDesktop">
+        <NavigationItems openLogin={() => setOpen(!open)}/>
+      </nav>
+      {open && <LoginForm />}
+      {/* TODO: Insert darkmode button */}
+    </header>
+  );
+}
 export default Toolbar;

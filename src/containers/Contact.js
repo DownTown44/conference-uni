@@ -4,8 +4,8 @@ import { HiLocationMarker } from 'react-icons/hi';
 import { IoPhonePortraitOutline } from 'react-icons/io5';
 import { HiMail } from 'react-icons/hi';
 
-import IconParagraph from '../components/ContactCardComponents/IconParagraph';
-import SocialLinks from '../components/Footer/SocialLinks';
+import IconParagraph from '../components/ContactComps/IconParagraph';
+import SocialLinks from '../components/SocialLinks/SocialLinks';
 
 const Contact = () => {
   return (
