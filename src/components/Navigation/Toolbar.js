@@ -1,7 +1,8 @@
 import React, { useState, useEffect }from 'react';
 
 import NavigationItems from './NavigationItems'; 
-import LoginForm from '../Login/LoginForm'; 
+import LoginForm from '../Login/LoginForm';
+import Backdrop from '../Backdrop/Backdrop';
 
 const Toolbar = (props) => {
   const [open, setOpen] = useState(false);
@@ -9,6 +10,13 @@ const Toolbar = (props) => {
   useEffect(() => {
     console.log(open);
   }, [open])
+
+  const Login = (
+    <>
+      <LoginForm />
+      <Backdrop show={open} onClick={() => setOpen(!open)}/>
+    </>
+  )
 
   return (
     <header className="toolbar">
@@ -19,7 +27,7 @@ const Toolbar = (props) => {
       <nav className="navigationDesktop">
         <NavigationItems openLogin={() => setOpen(!open)}/>
       </nav>
-      {open && <LoginForm />}
+      {open && Login}
       {/* TODO: Insert darkmode button */}
     </header>
   );

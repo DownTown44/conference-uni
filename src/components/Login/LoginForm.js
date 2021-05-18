@@ -11,16 +11,18 @@ const LoginForm = () => {
       <form>
         <h1>User Login</h1>
         <div className="loginForm__field">
-          <AiOutlineUser />
+          <AiOutlineUser className="loginForm__field-icon" />
           <input 
             type="username"
-            name="username" />
+            name="username"
+            placeholder="Username" />
         </div>
         <div className="loginForm__field">
-          <RiLockPasswordLine />
+          <RiLockPasswordLine className="loginForm__field-icon" />
           <input 
             type="password"
-            name="password" />
+            name="password"
+            placeholder="Password" />
         </div>
         <button type="submit">Login</button>
         <a>Forgot your password?</a>
