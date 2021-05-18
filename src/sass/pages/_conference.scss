@@ -1,0 +1,89 @@
+@mixin attendee {
+  width: 100%;
+  min-height: 50vh;
+  padding: 7rem 14rem;
+  background-color: $color-primary-light;
+  font-size: 2.5rem;
+  color: $color-secondary;
+
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 4rem;
+    color: $color-secondary;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+
+  span {
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  
+  & p:last-of-type {
+    font-size: 2rem;
+  }
+}
+
+.conference {
+  display: flex;
+  flex-direction: column;
+
+  &__intro {
+    background-color: $color-white-background;
+    padding: 7rem;
+    
+    &-box {
+      margin: 0 auto;
+      width: 50%;
+
+      display: flex;
+      flex-direction: column;
+  
+      h1 {
+        font-size: 3.5rem;
+        color: $color-primary;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+      }
+
+      & p:first-of-type {
+        margin: 0 auto;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 2.2rem;
+        color: $color-primary-light;
+      }
+
+
+    }
+  }
+
+  &__attend {
+    display: flex;
+    width: 100%;
+    
+    &-presenter {
+      @include attendee();
+    }
+
+    &-challenger {
+      @include attendee();
+      background-color: $color-secondary;
+      border-right: 3px solid $color-primary;
+      color: $color-primary-light;
+
+      h1 {
+        color: $color-primary-light;
+      }
+    }
+  }
+}
+
+li {
+  margin-left: 4rem;
+}

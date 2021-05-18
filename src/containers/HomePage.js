@@ -69,7 +69,7 @@ const HomePage = () => {
           uClass="u-flex-left" 
           icon={<FaChalkboardTeacher className="story__box__board-icon" />}
           image={Boxes}
-          title="Break the web">
+          title="Break the Web">
             Break the web is a conference for top notch web developers.
             You will hear about the newest, most impactful changes on the web.
             You can attend as a participant or as a presenter!
@@ -86,7 +86,7 @@ const HomePage = () => {
           uClass="u-flex-left" 
           icon={<FaRegLightbulb className="story__box__board-icon" />}
           buttonText="Break the web!"
-          ctaHref=""
+          ctaHref="/conference"
           title="Have an idea?">
             To innovate, or just to get better everyday, you need to think outside of the box, and to think outside you'll need to break out... you'll need to break the web.
         </Story>

@@ -57,11 +57,9 @@
       transform: translateY(-3px);
 
       a {
-        color: $color-primary;
+        color: $color-primary !important;
       }
     }
-
-    // TODO: Active should only have border
 
     a {
       text-decoration: none;
@@ -70,5 +68,11 @@
       cursor: pointer;
     }
 
+    &--active {
+      border: 2px solid $color-secondary;
+      a {
+        color: $color-secondary !important;
+      }
+    }
   }
 }

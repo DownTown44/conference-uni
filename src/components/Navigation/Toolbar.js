@@ -1,4 +1,4 @@
-import React, { useState, useEffect }from 'react';
+import React, { useState }from 'react';
 
 import NavigationItems from './NavigationItems'; 
 import LoginForm from '../Login/LoginForm';
@@ -6,10 +6,6 @@ import Backdrop from '../Backdrop/Backdrop';
 
 const Toolbar = (props) => {
   const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    console.log(open);
-  }, [open])
 
   const Login = (
     <>

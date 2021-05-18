@@ -45,6 +45,46 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   flex-direction: row-reverse; }
 
+.application {
+  background-color: #f3f3f3;
+  padding: 5rem;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 5rem;
+  width: 40rem;
+  height: 50rem;
+  color: #582358;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+  .application__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .application__form-field {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 7rem; }
+      .application__form-field label {
+        font-size: 2.3rem;
+        margin: 0 auto;
+        margin-bottom: 1rem; }
+      .application__form-field textarea {
+        padding: 2rem;
+        color: #582358;
+        min-height: 15rem;
+        max-height: 15rem;
+        min-width: 20rem;
+        max-width: 20rem;
+        font-size: 2rem; }
+    .application__form button {
+      cursor: pointer;
+      font-size: 2rem;
+      height: 4rem;
+      width: 20rem;
+      margin: 0 auto; }
+
 .backdrop {
   width: 100%;
   height: 100%;
@@ -269,7 +309,8 @@ body::-webkit-scrollbar-thumb {
   width: 35rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  transition: all .3s ease-out; }
   .newsCard h2 {
     color: #3A173A;
     font-size: 3.5rem; }
@@ -278,6 +319,8 @@ body::-webkit-scrollbar-thumb {
     font-weight: 400;
     font-size: 1.8rem;
     margin-bottom: 2rem; }
+  .newsCard:hover {
+    transform: translateY(-5px); }
 
 .signupForm {
   height: 60rem;
@@ -478,11 +521,15 @@ body::-webkit-scrollbar-thumb {
       background-color: #5EFC8D;
       transform: translateY(-3px); }
       .navigationItems__item:hover a {
-        color: #3A173A; }
+        color: #3A173A !important; }
     .navigationItems__item a {
       text-decoration: none;
       color: #f3f3f3;
       cursor: pointer; }
+    .navigationItems__item--active {
+      border: 2px solid #5EFC8D; }
+      .navigationItems__item--active a {
+        color: #5EFC8D !important; }
 
 .footer {
   height: 40rem;
@@ -525,6 +572,78 @@ body::-webkit-scrollbar-thumb {
     align-items: center; }
     .footer__end span {
       color: #5EFC8D; }
+
+.conference {
+  display: flex;
+  flex-direction: column; }
+  .conference__intro {
+    background-color: #f3f3f3;
+    padding: 7rem; }
+    .conference__intro-box {
+      margin: 0 auto;
+      width: 50%;
+      display: flex;
+      flex-direction: column; }
+      .conference__intro-box h1 {
+        font-size: 3.5rem;
+        color: #3A173A;
+        margin: 0 auto;
+        margin-bottom: 4rem; }
+      .conference__intro-box p:first-of-type {
+        margin: 0 auto;
+        font-weight: 600; }
+      .conference__intro-box p {
+        font-size: 2.2rem;
+        color: #582358; }
+  .conference__attend {
+    display: flex;
+    width: 100%; }
+    .conference__attend-presenter {
+      width: 100%;
+      min-height: 50vh;
+      padding: 7rem 14rem;
+      background-color: #582358;
+      font-size: 2.5rem;
+      color: #5EFC8D;
+      display: flex;
+      flex-direction: column; }
+      .conference__attend-presenter h1 {
+        font-size: 4rem;
+        color: #5EFC8D;
+        margin: 0 auto;
+        margin-bottom: 4rem; }
+      .conference__attend-presenter span {
+        font-weight: 600;
+        font-style: italic; }
+      .conference__attend-presenter p:last-of-type {
+        font-size: 2rem; }
+    .conference__attend-challenger {
+      width: 100%;
+      min-height: 50vh;
+      padding: 7rem 14rem;
+      background-color: #582358;
+      font-size: 2.5rem;
+      color: #5EFC8D;
+      display: flex;
+      flex-direction: column;
+      background-color: #5EFC8D;
+      border-right: 3px solid #3A173A;
+      color: #582358; }
+      .conference__attend-challenger h1 {
+        font-size: 4rem;
+        color: #5EFC8D;
+        margin: 0 auto;
+        margin-bottom: 4rem; }
+      .conference__attend-challenger span {
+        font-weight: 600;
+        font-style: italic; }
+      .conference__attend-challenger p:last-of-type {
+        font-size: 2rem; }
+      .conference__attend-challenger h1 {
+        color: #582358; }
+
+li {
+  margin-left: 4rem; }
 
 .contact {
   background-color: #f3f3f3;

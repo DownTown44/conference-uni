@@ -1,0 +1,51 @@
+.application {
+  background-color: $color-white-background;
+  padding: 5rem;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 5rem;
+  width: 40rem;
+  height: 50rem;
+  color: $color-primary-light;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-field {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 7rem;
+
+      label {
+        font-size: 2.3rem;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+      }
+
+      textarea {
+        padding: 2rem;
+        color: $color-primary-light;
+        min-height: 15rem;
+        max-height: 15rem;
+        min-width: 20rem;
+        max-width: 20rem;
+        font-size: 2rem;
+      }
+    }
+
+    button {
+      cursor: pointer;
+      font-size: 2rem;
+      height: 4rem;
+      width: 20rem;
+      margin: 0 auto;
+    }
+  }
+}
