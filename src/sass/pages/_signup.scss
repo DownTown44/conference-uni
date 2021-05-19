@@ -28,6 +28,21 @@
       justify-content: space-between;
     }
   }
+
+  @media only screen and (max-width: 1200px) { 
+    flex-direction: column;
+    height: auto;
+
+    &__form {
+      width: 100%;
+      padding-bottom: 7rem;
+    }
+
+    &__community {
+      width: 100%;
+      border-left: 3px solid $color-primary;
+    }
+  }
 }
 
 .communityCard {
@@ -46,5 +61,22 @@
 
   &:hover {
     transform: translateY(-5px);
+  }
+
+  @media only screen and (max-width: 1200px) { 
+    height: 25rem;
+    width: 40rem;
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  @media only screen and (max-width: 950px) {
+    align-self: center;
+    margin: 0 auto;
+    &:not(:last-child) {
+      margin-bottom: 7rem;
+    }
   }
 }

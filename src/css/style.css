@@ -994,6 +994,16 @@ li {
       display: flex;
       flex-direction: column;
       justify-content: space-between; }
+  @media only screen and (max-width: 1200px) {
+    .signup {
+      flex-direction: column;
+      height: auto; }
+      .signup__form {
+        width: 100%;
+        padding-bottom: 7rem; }
+      .signup__community {
+        width: 100%;
+        border-left: 3px solid #3A173A; } }
 
 .communityCard {
   background-color: #f3f3f3;
@@ -1008,3 +1018,17 @@ li {
     align-self: flex-end; }
   .communityCard:hover {
     transform: translateY(-5px); }
+  @media only screen and (max-width: 1200px) {
+    .communityCard {
+      height: 25rem;
+      width: 40rem;
+      font-size: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around; } }
+  @media only screen and (max-width: 950px) {
+    .communityCard {
+      align-self: center;
+      margin: 0 auto; }
+      .communityCard:not(:last-child) {
+        margin-bottom: 7rem; } }
