@@ -773,8 +773,28 @@ li {
     display: flex;
     justify-content: center;
     align-items: flex-start; }
-  .signup__didyou {
+  .signup__community {
     background-color: #5EFC8D;
     height: 100%;
     width: 40%;
     border-right: 3px solid #3A173A; }
+    .signup__community-content {
+      height: 100%;
+      padding: 7rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+
+.communityCard {
+  background-color: #f3f3f3;
+  color: #582358;
+  height: 18rem;
+  padding: 3rem;
+  font-size: 2rem;
+  width: 30rem;
+  border-radius: 25px;
+  transition: all .3s ease-out; }
+  .communityCard:nth-child(2) {
+    align-self: flex-end; }
+  .communityCard:hover {
+    transform: translateY(-5px); }

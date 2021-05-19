@@ -13,10 +13,38 @@
     align-items: flex-start;
   }
 
-  &__didyou{
+  &__community{
     background-color: $color-secondary;
     height: 100%;
     width: 40%;
     border-right: 3px solid $color-primary;
+
+    &-content {
+      height: 100%;
+      padding: 7rem;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
+
+.communityCard {
+  background-color: $color-white-background;
+  color: $color-primary-light;
+  height: 18rem;
+  padding: 3rem;
+  font-size: 2rem;
+  width: 30rem;
+  border-radius: 25px;
+  transition: all .3s ease-out;
+
+  &:nth-child(2) {
+    align-self: flex-end;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
   }
 }

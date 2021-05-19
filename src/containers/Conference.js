@@ -47,7 +47,7 @@ const Conference = () => {
           <p>As a challenger you will need to attend the presentation phase and listen to the challenges.</p>
           <p>You can come up with your <span>own</span> challenge as long as it is inside the topic.</p>
           <br />
-          <p>The purpose is that you will have to use the idea/idea's that you heard on the presentation</p>
+          <p>The purpose is that you will have to use the idea/idea's that you heard on the presentation.</p>
           <br />
           <h4>Things you need:</h4>
           <ul>
