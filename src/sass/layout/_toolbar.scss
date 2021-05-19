@@ -8,7 +8,7 @@
   align-items: center;
 
   &__logo {
-    background-color: $color-secondary;
+    color: $color-secondary;
     height: 5rem;
     width: 5rem;
 
@@ -17,8 +17,34 @@
     margin-left: 5rem;
   }
 
+  &__menu {
+    font-size: 3rem;
+    color: $color-primary-light;
+    background-color: $color-secondary;
+    padding: 1rem;
+    border-radius: 5px;
+    display: none;
+  }
+
   @media only screen and (max-width: 1100px) {
     height: 80px;
+    border-radius: 0;
+  }
+
+  @media only screen and (max-width: 900px) {
+    & > * {
+      display: none;
+    }
+
+    &__menu {
+      margin-left: 2rem;
+      margin-right: auto;
+      display: block;
+    }
+
+    position: sticky;
+    top: 0;
+    z-index: 98;
   }
 }
 
@@ -82,5 +108,21 @@
     @media only screen and (max-width: 1100px) {
       font-size: 1.5rem;
     }
+
+    @media only screen and (max-width: 900px) {
+      margin-left: 0;
+      margin-bottom: 1rem;
+      width: 100%;
+      font-size: 2.5rem;
+
+      &:not(:first-child) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    margin: 1rem 0;
+    flex-direction: column;
   }
 }

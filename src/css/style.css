@@ -51,6 +51,12 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   flex-direction: row-reverse; }
 
+@media only screen and (max-width: 750px) {
+  .u-flex-left {
+    flex-direction: column; }
+  .u-flex-right {
+    flex-direction: column; } }
+
 .application {
   background-color: #f3f3f3;
   padding: 5rem;
@@ -95,7 +101,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: 99;
+  z-index: 95;
   /* To position it in the top left corner */
   left: 0;
   top: 0;
@@ -245,6 +251,32 @@ body::-webkit-scrollbar-thumb {
     .loginForm a:hover, .loginForm a:visited:hover {
       color: #5EFC8D; }
 
+@media only screen and (max-width: 900px) {
+  .loginForm {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    border-radius: 0; }
+    .loginForm form {
+      height: 100%; }
+    .loginForm h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem; }
+    .loginForm__field {
+      justify-content: center; }
+      .loginForm__field input {
+        height: 6rem;
+        font-size: 3rem; }
+      .loginForm__field-icon {
+        font-size: 5rem; }
+    .loginForm button {
+      width: 20rem;
+      height: 6rem;
+      font-size: 3rem; }
+    .loginForm a, .loginForm a:visited {
+      font-size: 2rem; } }
+
 .newsFeed {
   padding: 7rem;
   overflow: hidden;
@@ -252,6 +284,9 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap; }
+  @media only screen and (max-width: 1850px) {
+    .newsFeed {
+      justify-content: center; } }
 
 .countDownCard {
   border: 2px solid #3A173A;
@@ -303,6 +338,9 @@ body::-webkit-scrollbar-thumb {
       font-size: 2rem;
       margin-left: 20%;
       margin-bottom: 10px; }
+  @media only screen and (max-width: 650px) {
+    .countDownCard {
+      height: 40rem; } }
 
 .newsCard {
   border: 2px solid #3A173A;
@@ -327,6 +365,10 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 2rem; }
   .newsCard:hover {
     transform: translateY(-5px); }
+  @media only screen and (max-width: 1850px) {
+    .newsCard {
+      margin-top: 3rem;
+      margin-left: 3rem; } }
 
 .signupForm {
   height: 60rem;
@@ -483,6 +525,34 @@ body::-webkit-scrollbar-thumb {
       color: #582358; }
   .story img {
     width: 45rem; }
+  @media only screen and (max-width: 1100px) {
+    .story__box {
+      width: 40rem; }
+    .story img {
+      width: 40rem; } }
+  @media only screen and (max-width: 1000px) {
+    .story__box {
+      width: 35rem; }
+      .story__box__board-icon {
+        font-size: 5rem; }
+      .story__box h2 {
+        font-size: 3.5rem; }
+      .story__box p {
+        font-size: 1.6rem; }
+    .story img {
+      width: 35rem; } }
+  @media only screen and (max-width: 750px) {
+    .story__box {
+      width: 45rem;
+      margin-bottom: 5rem; }
+      .story__box__board-icon {
+        font-size: 5rem; }
+      .story__box h2 {
+        font-size: 3.5rem; }
+      .story__box p {
+        font-size: 1.8rem; }
+    .story img {
+      width: 45rem; } }
 
 .toolbar {
   background-color: #3A173A;
@@ -492,14 +562,33 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center; }
   .toolbar__logo {
-    background-color: #5EFC8D;
+    color: #5EFC8D;
     height: 5rem;
     width: 5rem;
     margin-right: auto;
     margin-left: 5rem; }
+  .toolbar__menu {
+    font-size: 3rem;
+    color: #582358;
+    background-color: #5EFC8D;
+    padding: 1rem;
+    border-radius: 5px;
+    display: none; }
   @media only screen and (max-width: 1100px) {
     .toolbar {
-      height: 80px; } }
+      height: 80px;
+      border-radius: 0; } }
+  @media only screen and (max-width: 900px) {
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 98; }
+      .toolbar > * {
+        display: none; }
+      .toolbar__menu {
+        margin-left: 2rem;
+        margin-right: auto;
+        display: block; } }
 
 .navigationItems {
   display: flex;
@@ -542,12 +631,52 @@ body::-webkit-scrollbar-thumb {
     @media only screen and (max-width: 1100px) {
       .navigationItems__item {
         font-size: 1.5rem; } }
+    @media only screen and (max-width: 900px) {
+      .navigationItems__item {
+        margin-left: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+        font-size: 2.5rem; }
+        .navigationItems__item:not(:first-child) {
+          margin-left: 0; } }
+  @media only screen and (max-width: 900px) {
+    .navigationItems {
+      margin: 1rem 0;
+      flex-direction: column; } }
+
+.sideDrawer {
+  position: fixed;
+  width: 280px;
+  max-width: 70%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  background-color: #3A173A;
+  padding: 32px 16px;
+  box-sizing: border-box;
+  transition: transform .3s ease-out; }
+  .sideDrawer__logo {
+    color: #5EFC8D;
+    height: 5rem;
+    width: 5rem;
+    margin-bottom: 4rem; }
+  @media only screen and (min-width: 900px) {
+    .sideDrawer {
+      display: none; } }
+
+.open {
+  transform: translateX(0); }
+
+.close {
+  transform: translateX(-100%); }
 
 .footer {
   height: 40rem;
   border-top: 4px solid #3A173A;
   background: linear-gradient(to bottom, #3A173A 0%, #222 100%);
   color: #f3f3f3;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -572,6 +701,12 @@ body::-webkit-scrollbar-thumb {
         cursor: pointer;
         color: #5EFC8D;
         text-decoration: none; }
+    @media only screen and (max-width: 1400px) {
+      .footer__box {
+        width: 60%; } }
+    @media only screen and (max-width: 850px) {
+      .footer__box {
+        width: 80%; } }
   .footer__end {
     background-color: #111;
     height: 7rem;

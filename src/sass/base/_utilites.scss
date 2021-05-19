@@ -10,3 +10,13 @@
   align-items: center;
   flex-direction: row-reverse;
 }
+
+@media only screen and (max-width: 750px) {
+  .u-flex-left {
+    flex-direction: column;
+  }
+
+  .u-flex-right {
+    flex-direction: column;
+  }
+}

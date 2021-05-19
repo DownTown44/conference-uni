@@ -44,5 +44,59 @@
   img {
     width: 45rem;
   }
+
+  @media only screen and (max-width: 1100px) {
+    &__box {
+      width: 40rem;
+    }
+
+    img {
+      width: 40rem;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    &__box {
+      width: 35rem;
+
+      &__board-icon {
+        font-size: 5rem;
+      }
+
+      h2 {
+        font-size: 3.5rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+      }
+    }
+
+    img {
+      width: 35rem;
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    &__box {
+      width: 45rem;
+      margin-bottom: 5rem;
+      &__board-icon {
+        font-size: 5rem;
+      }
+
+      h2 {
+        font-size: 3.5rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+      }
+    }
+
+    img {
+      width: 45rem;
+    }
+  }
 }
 

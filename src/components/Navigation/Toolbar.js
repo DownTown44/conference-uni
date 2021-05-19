@@ -3,27 +3,24 @@ import React, { useState }from 'react';
 import NavigationItems from './NavigationItems'; 
 import LoginForm from '../Login/LoginForm';
 import Backdrop from '../Backdrop/Backdrop';
+import { GiBreakingChain } from 'react-icons/gi';
 
 const Toolbar = (props) => {
-  const [open, setOpen] = useState(false);
-
   const Login = (
     <>
       <LoginForm />
-      <Backdrop show={open} onClick={() => setOpen(!open)}/>
+      <Backdrop show={props.open} onClick={props.openLogin}/>
     </>
   )
 
   return (
     <header className="toolbar">
-      {/* TODO: Insert logo */}
-      <div className="toolbar__logo">
-
-      </div>
+      <GiBreakingChain className="toolbar__logo"/>
+      <div className="toolbar__menu" onClick={props.openSidedrawer}>Menu</div>
       <nav className="navigationDesktop">
-        <NavigationItems openLogin={() => setOpen(!open)}/>
+        <NavigationItems openLogin={props.openLogin}/>
       </nav>
-      {open && Login}
+      {props.open && Login}
       {/* TODO: Insert darkmode button */}
     </header>
   );
