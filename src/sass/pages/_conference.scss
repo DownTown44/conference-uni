@@ -87,3 +87,118 @@
 li {
   margin-left: 4rem;
 }
+
+@media only screen and (max-width: 1400px) {
+  .conference {
+    &__attend {
+      &-presenter {
+        padding: 7rem 7rem;
+      }
+
+      &-challenger {
+        padding: 7rem 7rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .conference {
+    &__attend {
+      &-presenter {
+        padding: 7rem 4rem;
+      }
+
+      &-challenger {
+        padding: 7rem 4rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .conference {
+    &__attend {
+      flex-direction: column;
+      &-presenter {
+        padding: 7rem 14rem;
+      }
+
+      &-challenger {
+        padding: 7rem 14rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .conference {
+    &__attend {
+      &-presenter {
+        padding: 7rem 7rem;
+      }
+
+      &-challenger {
+        padding: 7rem 7rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .conference {
+    &__attend {
+      &-presenter {
+        padding: 7rem 4rem;
+      }
+
+      &-challenger {
+        padding: 7rem 4rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .conference {
+    &__intro {
+      &-box {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .conference {
+    &__intro {
+      &-box {
+        width: 75%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .conference {
+    &__intro {
+      padding-left: 5rem;
+      padding-right: 5rem;
+      &-box {
+        width: 95%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .conference {
+    &__intro {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      &-box {
+        width: 100%;
+      }
+    }
+  }
+}

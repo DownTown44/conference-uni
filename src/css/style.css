@@ -792,6 +792,60 @@ body::-webkit-scrollbar-thumb {
 li {
   margin-left: 4rem; }
 
+@media only screen and (max-width: 1400px) {
+  .conference__attend-presenter {
+    padding: 7rem 7rem; }
+  .conference__attend-challenger {
+    padding: 7rem 7rem; } }
+
+@media only screen and (max-width: 1200px) {
+  .conference__attend-presenter {
+    padding: 7rem 4rem; }
+  .conference__attend-challenger {
+    padding: 7rem 4rem; } }
+
+@media only screen and (max-width: 1100px) {
+  .conference__attend {
+    flex-direction: column; }
+    .conference__attend-presenter {
+      padding: 7rem 14rem; }
+    .conference__attend-challenger {
+      padding: 7rem 14rem; } }
+
+@media only screen and (max-width: 900px) {
+  .conference__attend-presenter {
+    padding: 7rem 7rem; }
+  .conference__attend-challenger {
+    padding: 7rem 7rem; } }
+
+@media only screen and (max-width: 650px) {
+  .conference__attend-presenter {
+    padding: 7rem 4rem; }
+  .conference__attend-challenger {
+    padding: 7rem 4rem; } }
+
+@media only screen and (max-width: 1200px) {
+  .conference__intro-box {
+    width: 60%; } }
+
+@media only screen and (max-width: 850px) {
+  .conference__intro-box {
+    width: 75%; } }
+
+@media only screen and (max-width: 650px) {
+  .conference__intro {
+    padding-left: 5rem;
+    padding-right: 5rem; }
+    .conference__intro-box {
+      width: 95%; } }
+
+@media only screen and (max-width: 500px) {
+  .conference__intro {
+    padding-left: 3rem;
+    padding-right: 3rem; }
+    .conference__intro-box {
+      width: 100%; } }
+
 .contact {
   background-color: #f3f3f3;
   min-height: 80vh;
