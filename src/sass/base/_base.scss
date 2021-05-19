@@ -7,6 +7,13 @@ $color-secondary-light: #9ffcbb;
 $color-white-text: #f3f3f3;
 $color-white-background: #f3f3f3;
 
+// SCREEN VARIABLES
+$bp-largest: 75em;   // 1200px
+$bp-large: 68.75em;  // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em;   // 600px
+$bp-smallest: 31.25em;   // 500px
+
 // Basic reset
 *,
 *::after,
@@ -32,11 +39,19 @@ body {
   padding: 1rem;
   background-color: $color-secondary;
   font-family: 'Lato', sans-serif;
+
+  @media only screen and (max-width: 1100px) {
+    padding: 0;
+  }
 }
 
 // Custom scrollbar
 body::-webkit-scrollbar {
   width: 12px;
+
+  @media only screen and (max-width: 1100px) {
+    width: 0;
+  }
 }
 
 body {
