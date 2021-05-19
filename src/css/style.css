@@ -860,6 +860,28 @@ li {
     background-color: #582358;
     margin: 0 auto;
     margin-top: 1.8rem; }
+  @media only screen and (max-width: 1200px) {
+    .contact {
+      flex-direction: column-reverse;
+      justify-content: space-between; }
+      .contact__contactCard {
+        margin-top: 0;
+        margin-bottom: 7rem; } }
+  @media only screen and (max-width: 650px) {
+    .contact__formBox {
+      width: 45rem; }
+    .contact__contactCard {
+      width: 45rem; }
+      .contact__contactCard p {
+        margin-left: 10px; } }
+  @media only screen and (max-width: 600px) {
+    .contact__formBox {
+      width: 38rem; }
+    .contact__contactCard {
+      width: 38rem;
+      padding: 1.5rem; }
+      .contact__contactCard p {
+        margin-left: 0; } }
 
 .homePage {
   background-color: #f3f3f3;

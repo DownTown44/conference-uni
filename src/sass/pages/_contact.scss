@@ -93,4 +93,43 @@
     margin: 0 auto;
     margin-top: 1.8rem;
   }
+
+  @media only screen and (max-width: 1200px) {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+
+    &__contactCard {
+      margin-top: 0;
+      margin-bottom: 7rem;
+    }
+  }
+
+  @media only screen and (max-width: 650px) {
+    &__formBox {
+      width: 45rem;
+    }
+    
+    &__contactCard {
+      width: 45rem;
+
+      p {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    &__formBox {
+      width: 38rem;
+    }
+
+    &__contactCard {
+      width: 38rem;
+      padding: 1.5rem;
+
+      p {
+        margin-left: 0;
+      }
+    }
+  }
 }
