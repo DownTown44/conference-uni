@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios'
 
 const SignupForm = () => {
   const [form, setForm] = useState({
@@ -7,16 +8,39 @@ const SignupForm = () => {
     lastName: "",
     username: "",
     password: "",
-    confirmPassword: ""
+    confirmPassword: "",
+    telNumber: "",
+    institution: "",
+    position: "",
+    academicDegree: "",
+    role: isPresenter ? "Presenter" : "Guest"
   })
 
   const [count, setCount] = useState(1);
+
+  const [isPresenter, setIsPresenter] = useState(false);
 
   const updateForm = (e) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value
     })
+  }
+
+  const submitForm = (event  ) => {
+    event.preventDefault();
+    axios({
+      method: 'post',
+      url: 'http://localhost/conference-backend/register.php',
+      headers: {
+          'content-type': 'application/json'
+      },
+      data: form
+    })
+    .then(res => {
+        console.log(res.data.result)
+    })
+    .catch(err => console.log(err.message));
   }
 
   return (
@@ -84,6 +108,51 @@ const SignupForm = () => {
                 onChange={updateForm}
                 value={form.confirmPassword} />
             </div>
+            {!isPresenter ? 
+              <button
+                className="ctaButton--small"
+                onClick={() => setIsPresenter(true)}>
+                Register as presenter
+              </button>
+            : null}
+
+            {isPresenter ? (
+              <>
+                <div className="signupForm__form-field">
+                  <label>Phone number</label>
+                  <input 
+                    type="text"
+                    name="telNumber"
+                    onChange={updateForm}
+                    value={form.telNumber} />
+                </div>
+                <div className="signupForm__form-field">
+                  <label>Institution</label>
+                  <input 
+                    type="text"
+                    name="institution"
+                    onChange={updateForm}
+                    value={form.institution} />
+                </div>
+                <div className="signupForm__form-field">
+                  <label>Position</label>
+                  <input 
+                    type="text"
+                    name="position"
+                    onChange={updateForm}
+                    value={form.position} />
+                </div>
+                <div className="signupForm__form-field">
+                  <label>Academic Degree</label>
+                  <input 
+                    type="text"
+                    name="academicDegree"
+                    onChange={updateForm}
+                    value={form.academicDegree} />
+                </div>
+              </>
+            ) : null}
+
           </>
         ) : null}
 
@@ -95,9 +164,14 @@ const SignupForm = () => {
             <p>First name: <span>{form.firstName}</span></p>
             <p>Last name: <span>{form.lastName}</span></p>
             <p>Username: <span>{form.username}</span></p>
+            <p>Phone number: <span>{form.telNumber}</span></p>
+            <p>Institution: <span>{form.institution}</span></p>
+            <p>Position: <span>{form.position}</span></p>
+            <p>Academic Degree: <span>{form.academicDegree}</span></p>
             <button
               className="ctaButton"
-              type="submit">
+              type="submit"
+              onClick={(e) => submitForm(e)}>
               Submit</button>
           </div>
         ) : null}
