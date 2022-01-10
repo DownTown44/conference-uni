@@ -154,6 +154,46 @@ body::-webkit-scrollbar-thumb {
       border-top: 1px solid #5EFC8D;
       animation: stripe-slide 12s infinite linear forwards; }
 
+.ctaButton--small, .ctaButton--small:visited {
+  width: 26rem;
+  height: 4.5rem;
+  margin: 0 auto;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #3A173A;
+  background-color: #5EFC8D;
+  border: 2px solid #582358;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s ease;
+  overflow: hidden;
+  position: relative; }
+  .ctaButton--small:after, .ctaButton--small:visited:after {
+    content: '';
+    display: block;
+    height: 7px;
+    width: 100%;
+    background-image: repeating-linear-gradient(45deg, #582358, #582358 1px, transparent 2px, transparent 5px);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-top: 1px solid #582358;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-size: 7px 7px; }
+  .ctaButton--small:hover, .ctaButton--small:visited:hover {
+    background-color: #582358;
+    color: #5EFC8D;
+    border-color: #3A173A; }
+    .ctaButton--small:hover:after, .ctaButton--small:visited:hover:after {
+      background-image: repeating-linear-gradient(45deg, #5EFC8D, #5EFC8D 1px, transparent 2px, transparent 5px);
+      border-top: 1px solid #5EFC8D;
+      animation: stripe-slide 12s infinite linear forwards; }
+
 .iconParagraph {
   font-size: 2.5rem;
   font-weight: 600;
@@ -371,7 +411,7 @@ body::-webkit-scrollbar-thumb {
       margin-left: 3rem; } }
 
 .signupForm {
-  height: 60rem;
+  min-height: 60rem;
   width: 50rem;
   display: flex;
   flex-direction: column; }
@@ -476,6 +516,11 @@ body::-webkit-scrollbar-thumb {
       background-color: #5EFC8D;
       border: 2px solid #3A173A;
       color: #582358; }
+
+.errorMessage {
+  font-size: 16px;
+  color: red;
+  margin: 0 auto; }
 
 .socialLinks {
   color: #5EFC8D;
@@ -1049,19 +1094,17 @@ li {
     background-color: #582358; }
 
 .signup {
-  height: 85vh;
+  min-height: 85vh;
   display: flex; }
   .signup__form {
     background-color: #582358;
-    height: 100%;
     width: 60%;
-    padding-top: 7rem;
+    padding: 7rem 0;
     display: flex;
     justify-content: center;
     align-items: flex-start; }
   .signup__community {
     background-color: #5EFC8D;
-    height: 100%;
     width: 40%;
     border-right: 3px solid #3A173A; }
     .signup__community-content {

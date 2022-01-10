@@ -1,5 +1,5 @@
 .signupForm {
-  height: 60rem;
+  min-height: 60rem;
   width: 50rem;
 
   display: flex;
@@ -152,3 +152,10 @@
     }
   }
 }
+
+.errorMessage {
+  font-size: 16px;
+  color: red;
+  margin: 0 auto;
+}
+

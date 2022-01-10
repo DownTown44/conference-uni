@@ -18,7 +18,7 @@ const Toolbar = (props) => {
       <GiBreakingChain className="toolbar__logo"/>
       <div className="toolbar__menu" onClick={props.openSidedrawer}>Menu</div>
       <nav className="navigationDesktop">
-        <NavigationItems openLogin={props.openLogin}/>
+        <NavigationItems openLogin={props.openLogin} logout={props.logout} isLoggedIn={props.isLoggedIn}/>
       </nav>
       {props.open && Login}
       {/* TODO: Insert darkmode button */}
