@@ -52,7 +52,7 @@ const LoginForm = () => {
       if(res.data.result) {
         handleCookie();
       } else {
-        alert("The password or the email is incorrect!")
+        alert("The password or the email is incorrect!");
         setLogin(false);
       }
 

@@ -133,3 +133,36 @@
     }
   }
 }
+
+.ctaButton:disabled {
+  color: rgb(112, 112, 112);
+  background-color: rgb(180, 169, 169);
+  border: 2px solid rgb(201, 188, 188);
+
+  &:after {
+    content: '';
+    display: block;
+    height: 7px;
+    width: 100%;
+    background-image: repeating-linear-gradient(
+      45deg,
+      rgb(201, 188, 188),
+      rgb(201, 188, 188) 1px,
+      transparent 2px,
+      transparent 5px
+    );
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-top: 1px solid rgb(201, 188, 188);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-size: 7px 7px;
+  }
+
+  &:hover {
+    &:after {
+      animation: none;
+    }
+  }
+}
