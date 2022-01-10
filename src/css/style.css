@@ -785,6 +785,25 @@ body::-webkit-scrollbar-thumb {
     .footer__end span {
       color: #5EFC8D; }
 
+.adminView {
+  background-color: #f3f3f3;
+  min-height: 80vh;
+  padding: 7rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap; }
+  .adminView table {
+    min-height: 35rem;
+    width: 80vw;
+    font-size: 2rem; }
+  .adminView table, .adminView th, .adminView td {
+    border: 1px solid #3A173A; }
+  .adminView th a, .adminView td a {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
 .conference {
   display: flex;
   flex-direction: column; }

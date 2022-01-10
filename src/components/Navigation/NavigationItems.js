@@ -15,7 +15,10 @@ const NavigationItems = (props) => {
       <NavigationItem link='/contact' location={location}>Contact</NavigationItem>
       {/* TODO: Conditional rendering sign up and sign in*/}
       {props.isLoggedIn ? 
-        <NavigationItem onClick={props.logout} location={'/'}>Log out</NavigationItem>
+        <>
+          <NavigationItem link='/files' location={location}>Files</NavigationItem>
+          <NavigationItem onClick={props.logout} location={'/'}>Log out</NavigationItem>
+        </>
       :
         <>
           <NavigationItem onClick={props.openLogin} location={null}>Sign in</NavigationItem>

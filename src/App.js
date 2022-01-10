@@ -9,6 +9,7 @@ import Layout from './hoc/Layout/Layout';
 import HomePage from './containers/HomePage';
 import Conference from './containers/Conference';
 import Contact from './containers/Contact';
+import AdminView from './containers/AdminView';
 import SignUp from './containers/SignUp';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Route exact path="/" component={HomePage} />
         <Route path="/conference" component={Conference} />
         <Route path="/contact" component={Contact} />
+        <Route path="/files" component={AdminView} />
         <Route path="/signup" component={SignUp} />
       </Switch>
     </Layout>
