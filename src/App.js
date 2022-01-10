@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import './css/style.css';
 
+import { useCookies } from "react-cookie";
 import { Route, Switch } from 'react-router-dom';
 import axios from 'axios';
 
@@ -11,6 +12,8 @@ import Contact from './containers/Contact';
 import SignUp from './containers/SignUp';
 
 function App() {
+  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+
   useEffect(() => {
     axios({
       method: 'get',
@@ -23,7 +26,7 @@ function App() {
   }, [])
 
   return (
-    <Layout>
+    <Layout isLoggedIn={cookies.user ? true : false} logout={() => removeCookie("user")}>
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/conference" component={Conference} />

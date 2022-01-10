@@ -1,7 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useCookies } from "react-cookie";
+import { useHistory } from 'react-router-dom';
 import axios from 'axios'
 
+import crypto from 'crypto';
+
 const SignupForm = () => {
+  let history = useHistory();
+  const [cookies, setCookie] = useCookies(["user"]);
+  const [register, setRegister] = useState(false);
   const [form, setForm] = useState({
     email: "",
     firstName: "",
@@ -13,11 +20,17 @@ const SignupForm = () => {
     institution: "",
     position: "",
     academicDegree: "",
-    role: isPresenter ? "Presenter" : "Guest"
+    role: "Guest"
   })
 
-  const [count, setCount] = useState(1);
+  useEffect(() => {
+    if(register) {
+      registerUser();
+    }
+  }, [register])
 
+
+  const [count, setCount] = useState(1);
   const [isPresenter, setIsPresenter] = useState(false);
 
   const updateForm = (e) => {
@@ -27,8 +40,26 @@ const SignupForm = () => {
     })
   }
 
-  const submitForm = (event  ) => {
-    event.preventDefault();
+  const asPresenter = () => {
+    setForm({
+      ...form,
+      role: "Presenter"
+    });
+    setIsPresenter(true);
+  }
+
+  const handleCookie = () => {
+    const user = {
+      email: form.email,
+      password: form.password
+    }
+
+    setCookie("user", user, {
+      path: "/"
+    });
+  }
+
+  const registerUser = () => {
     axios({
       method: 'post',
       url: 'http://localhost/conference-backend/register.php',
@@ -38,9 +69,23 @@ const SignupForm = () => {
       data: form
     })
     .then(res => {
-        console.log(res.data.result)
+      handleCookie();
+      history.push('/');
     })
     .catch(err => console.log(err.message));
+  }
+
+  const submitForm = (event) => {
+    event.preventDefault();
+    if(form.password === form.confirmPassword) {
+      let hashedPw = crypto.createHash('md5').update(form.password).digest('hex');
+      setForm({
+        ...form,
+        password: hashedPw,
+        confirmPassword: hashedPw
+      });
+      setRegister(true);
+    }
   }
 
   return (
@@ -84,6 +129,9 @@ const SignupForm = () => {
         {/* SECOND PART */}
         {count === 2 ? (
           <>
+            {form.password !== form.confirmPassword ? (
+              <p className="errorMessage">The passwords are not matching!</p>
+            ): null}
             <div className="signupForm__form-field">
               <label>Username</label>
               <input 
@@ -111,7 +159,7 @@ const SignupForm = () => {
             {!isPresenter ? 
               <button
                 className="ctaButton--small"
-                onClick={() => setIsPresenter(true)}>
+                onClick={() => asPresenter()}>
                 Register as presenter
               </button>
             : null}

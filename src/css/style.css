@@ -517,6 +517,11 @@ body::-webkit-scrollbar-thumb {
       border: 2px solid #3A173A;
       color: #582358; }
 
+.errorMessage {
+  font-size: 16px;
+  color: red;
+  margin: 0 auto; }
+
 .socialLinks {
   color: #5EFC8D;
   font-size: 4rem;
